@@ -57,4 +57,8 @@ public class Player : NetworkBehaviour {
 	void Update () {
 		
 	}
+
+	public int GetCurrentHP() {
+		return (int)health;
+	}
 }
