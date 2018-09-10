@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 54266597689600242}
   - component: {fileID: 114281170303633608}
   - component: {fileID: 114326206986551000}
+  - component: {fileID: 114248182085746000}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -39,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1181724048573580}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -23.950777, y: -7.662583e-17, z: 34.509205}
+  m_LocalPosition: {x: 23.375626, y: 63.245102, z: 46.62369}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
@@ -114,6 +115,27 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114248182085746000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1181724048573580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 3
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.001
+  m_SnapThreshold: 10
+  m_InterpolateRotation: 100
+  m_InterpolateMovement: 1
 --- !u!114 &114281170303633608
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -157,3 +179,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7814c34fd6549c4bb100e066e4f37b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minimumInput: 0.1
+  moveSpeed: 25

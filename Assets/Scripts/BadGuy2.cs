@@ -31,6 +31,22 @@ public class BadGuy2 : NetworkBehaviour {
 				Vector3 force = transform.position - collision.transform.position;
 				force.Normalize();
 
+				RaycastHit hit;
+
+				while (Physics.Raycast(transform.position, force, out hit, 25.0f)) {
+					Debug.Log("We hit something...");
+
+					// Check if we didn't hit a wall.
+					if (hit.transform.gameObject.tag != "Wall") {
+						Debug.Log("we can go this way.");
+
+						break;
+					}
+
+					// Rotate our direction.
+					force = Quaternion.Euler(0, -15, 0) * force;
+				}
+
 				rigidbody.velocity = force * speed;
 			}
 		}
